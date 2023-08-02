@@ -218,7 +218,7 @@ export default async function SiteLayout({
       </div>
 
 
-      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      {/* <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
           <a href="https://flowbite.com" className="flex items-center">
             <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" />
@@ -324,20 +324,20 @@ export default async function SiteLayout({
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
 
-      <div className="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
+      {/* <div className="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
         <MegaMenu />
-      </div>
+      </div> */}
 
 
-      <div className="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
+      {/* <div className="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
         <h2 className="mb-8">Divine Services</h2>
         <div className="mx-4">
           <StepperTimeline />
         </div>
-      </div>
+      </div> */}
 
       {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="grid gap-4">
