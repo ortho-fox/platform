@@ -46,12 +46,23 @@ export default function CreateSiteModal() {
           }
         })
       }
-      className="w-full rounded-md bg-white dark:bg-black md:max-w-md md:border md:border-stone-200 md:shadow dark:md:border-stone-700"
+      className="w-full rounded-sm bg-white dark:bg-black md:max-w-md md:border md:border-stone-200 md:shadow dark:md:border-stone-700"
     >
-      <div className="relative flex flex-col space-y-4 p-5 md:p-10">
-        <h2 className="font-cal text-2xl dark:text-white">Create a new site</h2>
 
-        <div className="flex flex-col space-y-2">
+      <div className="relative flex flex-col space-y-6 p-5 md:p-10">
+
+
+        <h2 className="font-cal text-2xl dark:text-white">Create a Church Website</h2>
+
+
+        <select className="w-full rounded-sm border-stone-200 bg-stone-50 px-4 py-2 text-sm font-medium text-stone-700 focus:outline-none focus:border-black focus:ring-black dark:bg-black dark:text-stone-200 dark:focus:ring-white">
+          <option selected>Church</option>
+          <option disabled>Monastery</option>
+          <option disabled>Personel</option>
+        </select>
+
+
+        <div className="flex flex-col space-y-1">
           <label
             htmlFor="name"
             className="text-sm font-medium text-stone-500 dark:text-stone-400"
@@ -61,17 +72,17 @@ export default function CreateSiteModal() {
           <input
             name="name"
             type="text"
-            placeholder="My Awesome Site"
+            placeholder="St. Annes Orthodox Church"
             autoFocus
             value={data.name}
             onChange={(e) => setData({ ...data, name: e.target.value })}
             maxLength={32}
             required
-            className="w-full rounded-md border border-stone-200 bg-stone-50 px-4 py-2 text-sm text-stone-600 placeholder:text-stone-400 focus:border-black focus:outline-none focus:ring-black dark:border-stone-600 dark:bg-black dark:text-white dark:placeholder-stone-700 dark:focus:ring-white"
+            className="w-full rounded-sm border border-stone-200 bg-stone-50 px-4 py-2 text-sm text-stone-600 placeholder:text-stone-400 focus:border-black focus:outline-none focus:ring-black dark:border-stone-600 dark:bg-black dark:text-white dark:placeholder-stone-700 dark:focus:ring-white"
           />
         </div>
 
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-1">
           <label
             htmlFor="subdomain"
             className="text-sm font-medium text-stone-500"
@@ -89,15 +100,16 @@ export default function CreateSiteModal() {
               pattern="[a-zA-Z0-9\-]+" // only allow lowercase letters, numbers, and dashes
               maxLength={32}
               required
-              className="w-full rounded-l-lg border border-stone-200 bg-stone-50 px-4 py-2 text-sm text-stone-600 placeholder:text-stone-400 focus:border-black focus:outline-none focus:ring-black dark:border-stone-600 dark:bg-black dark:text-white dark:placeholder-stone-700 dark:focus:ring-white"
+              className="w-full rounded-l-sm border border-stone-200 bg-stone-50 px-4 py-2 text-sm text-stone-600 placeholder:text-stone-400 focus:border-black focus:outline-none focus:ring-black dark:border-stone-600 dark:bg-black dark:text-white dark:placeholder-stone-700 dark:focus:ring-white"
             />
-            <div className="flex items-center rounded-r-lg border border-l-0 border-stone-200 bg-stone-100 px-3 text-sm dark:border-stone-600 dark:bg-stone-800 dark:text-stone-400">
+            <div className="flex items-center rounded-r-sm border border-l-0 border-stone-200 bg-stone-100 px-3 text-sm dark:border-stone-600 dark:bg-stone-800 dark:text-stone-400">
               .{process.env.NEXT_PUBLIC_ROOT_DOMAIN}
             </div>
           </div>
+          <p className="text-xs text-gray-500">You can set up a different domain later. This one can be used permanantly if you need. <em className="text-gray-700">(e.g. stannes.orthodox.xc)</em></p>
         </div>
 
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-1">
           <label
             htmlFor="description"
             className="text-sm font-medium text-stone-500"
@@ -106,12 +118,12 @@ export default function CreateSiteModal() {
           </label>
           <textarea
             name="description"
-            placeholder="Description about why my site is so awesome"
+            placeholder="Describe the site in brief"
             value={data.description}
             onChange={(e) => setData({ ...data, description: e.target.value })}
             maxLength={140}
             rows={3}
-            className="w-full rounded-md border border-stone-200 bg-stone-50 px-4 py-2 text-sm text-stone-600 placeholder:text-stone-400 focus:border-black  focus:outline-none focus:ring-black dark:border-stone-600 dark:bg-black dark:text-white dark:placeholder-stone-700 dark:focus:ring-white"
+            className="w-full rounded-sm border border-stone-200 bg-stone-50 px-4 py-2 text-sm text-stone-600 placeholder:text-stone-400 focus:border-black  focus:outline-none focus:ring-black dark:border-stone-600 dark:bg-black dark:text-white dark:placeholder-stone-700 dark:focus:ring-white"
           />
         </div>
       </div>
@@ -126,7 +138,7 @@ function CreateSiteFormButton() {
   return (
     <button
       className={cn(
-        "flex h-10 w-full items-center justify-center space-x-2 rounded-md border text-sm transition-all focus:outline-none",
+        "flex h-10 w-full items-center justify-center space-x-2 rounded-sm border text-sm transition-all focus:outline-none",
         pending
           ? "cursor-not-allowed border-stone-200 bg-stone-100 text-stone-400 dark:border-stone-700 dark:bg-stone-800 dark:text-stone-300"
           : "border-black bg-black text-white hover:bg-white hover:text-black dark:border-stone-700 dark:hover:border-stone-200 dark:hover:bg-black dark:hover:text-white dark:active:bg-stone-800",

@@ -8,6 +8,8 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./lib/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@tremor/**/*.{js,ts,jsx,tsx}", // Tremor module
+    "./node_modules/flowbite-react/**/*.js", // Flowbite module
+
   ],
   theme: {
     extend: {
@@ -181,5 +183,6 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
     require("tailwindcss-animate"),
+    require('flowbite/plugin'),
   ],
 };

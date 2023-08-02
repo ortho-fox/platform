@@ -38,7 +38,7 @@ export default async function SiteHomePage({
                 />
               </div>
               <div className="mx-auto mt-10 w-5/6 lg:w-full">
-                <h2 className="my-10 font-title text-4xl dark:text-white md:text-6xl">
+                <h2 className="my-10 font-title text-4xl dark:text-white md:text-6xl captalize">
                   {posts[0].title}
                 </h2>
                 <p className="w-full text-base dark:text-white md:text-lg lg:w-2/3">

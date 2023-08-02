@@ -3,6 +3,7 @@ import Form from "@/components/form";
 import { getSession } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import { editUser } from "@/lib/actions";
+import ToggleSwitchElement from "@/components/toggle-switch";
 
 export default async function SettingsPage() {
   const session = await getSession();
@@ -28,6 +29,7 @@ export default async function SettingsPage() {
           }}
           handleSubmit={editUser}
         />
+        <ToggleSwitchElement />
         <Form
           title="Email"
           description="Your email on this app."
