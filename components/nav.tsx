@@ -6,6 +6,7 @@ import {
   BarChart3,
   Edit3,
   Globe,
+  Layers,
   Layout,
   LayoutDashboard,
   Megaphone,
@@ -81,25 +82,43 @@ export default function Nav({ children }: { children: ReactNode }) {
         {
           name: "Back to All Sites",
           href: "/sites",
-          icon: <ArrowLeft width={18} />,
+          icon: <ArrowLeft width={18} strokeWidth={1} />,
+        },
+        {
+          name: "Dashboard",
+          href: `/site/${id}/dashboard`,
+          isActive: segments.includes("dashboard"),
+          icon: <LayoutDashboard width={20} strokeWidth={1} />,
         },
         {
           name: "Posts",
           href: `/site/${id}`,
           isActive: segments.length === 2,
-          icon: <Newspaper width={18} />,
+          icon: <Newspaper width={20} strokeWidth={1} />,
+        },
+        {
+          name: "Pages",
+          href: `/site/${id}/pages`,
+          isActive: segments.includes("pages"),
+          icon: <Layers width={20} strokeWidth={1} />,
+        },
+        {
+          name: "Navigation",
+          href: `/site/${id}/navigation`,
+          isActive: segments.includes("navigation"),
+          icon: <Menu width={18} strokeWidth={1} />,
         },
         {
           name: "Analytics",
           href: `/site/${id}/analytics`,
           isActive: segments.includes("analytics"),
-          icon: <BarChart3 width={18} />,
+          icon: <BarChart3 width={18} strokeWidth={1} />,
         },
         {
           name: "Settings",
           href: `/site/${id}/settings`,
           isActive: segments.includes("settings"),
-          icon: <Settings width={18} />,
+          icon: <Settings width={18} strokeWidth={1} />,
         },
       ];
     } else if (segments[0] === "post" && id) {
@@ -128,19 +147,19 @@ export default function Nav({ children }: { children: ReactNode }) {
         name: "Overview",
         href: "/",
         isActive: segments.length === 0,
-        icon: <LayoutDashboard width={18} />,
+        icon: <LayoutDashboard width={20} strokeWidth={1} />,
       },
       {
         name: "Sites",
         href: "/sites",
         isActive: segments[0] === "sites",
-        icon: <Globe width={18} />,
+        icon: <Globe width={20} strokeWidth={1} />,
       },
       {
         name: "Settings",
         href: "/settings",
         isActive: segments[0] === "settings",
-        icon: <Settings width={18} />,
+        icon: <Settings width={20} strokeWidth={1} />,
       },
     ];
   }, [segments, id, siteId]);

@@ -15,6 +15,11 @@ export default function SiteSettingsNav() {
       segment: null,
     },
     {
+      name: "Test",
+      href: `/site/${id}/settings/test`,
+      segment: "test",
+    },
+    {
       name: "Domains",
       href: `/site/${id}/settings/domains`,
       segment: "domains",
