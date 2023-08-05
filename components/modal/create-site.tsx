@@ -72,7 +72,7 @@ export default function CreateSiteModal() {
           <input
             name="name"
             type="text"
-            placeholder="St. Annes Orthodox Church"
+            placeholder="St. Anne Orthodox Church"
             autoFocus
             value={data.name}
             onChange={(e) => setData({ ...data, name: e.target.value })}
@@ -106,7 +106,7 @@ export default function CreateSiteModal() {
               .{process.env.NEXT_PUBLIC_ROOT_DOMAIN}
             </div>
           </div>
-          <p className="text-xs text-gray-500">You can set up a different domain later. This one can be used permanantly if you need. <em className="text-gray-700">(e.g. stannes.orthodox.xc)</em></p>
+          <p className="text-xs text-gray-500"><em className="text-gray-700">(e.g. st-anne.orthdx.site)</em><br />You can set up a different domain later if you need.</p>
         </div>
 
         <div className="flex flex-col space-y-1">
