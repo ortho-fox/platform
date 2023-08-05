@@ -1,3 +1,4 @@
+// /lib/auth.ts
 import { getServerSession, type NextAuthOptions } from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
 import DiscordProvider from "next-auth/providers/discord";
@@ -12,6 +13,15 @@ export const authOptions: NextAuthOptions = {
     DiscordProvider({
       clientId: process.env.DISCORD_CLIENT_ID as string,
       clientSecret: process.env.DISCORD_CLIENT_SECRET as string,
+      profile(profile) {
+        return {
+          id: profile.id, // Discord user ID
+          name: profile.username, // Discord username
+          discord_username: profile.username, // Discord username (you can customize this property name if needed)
+          email: profile.email, // Discord user email (if provided)
+          image: profile.avatar, // Discord user avatar
+        };
+      },
     }),
     GitHubProvider({
       clientId: process.env.AUTH_GITHUB_ID as string,

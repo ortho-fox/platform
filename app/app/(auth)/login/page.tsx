@@ -1,6 +1,7 @@
 import Image from "next/image";
-import LoginButton from "./login-button";
 import { Suspense } from "react";
+import LoginButtonGithub from "./login-button-github";
+import LoginButtonDiscord from "./login-button-discord";
 
 export default function LoginPage() {
   return (
@@ -17,15 +18,17 @@ export default function LoginPage() {
           orthdx.site
         </h1>
         <p className="mt-2 text-center text-sm text-stone-600 dark:text-stone-400">
-          Developer preview requires a GitHub account. <br />
-          <a
-            className="font-medium text-black hover:text-stone-800 dark:text-stone-300 dark:hover:text-stone-100"
-            href="https://orthofox.vercel.app"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Read the announcement.
-          </a>
+          The is a developer preview.
+          <p className="mt-2 text-center text-sm text-stone-600 dark:text-stone-400">
+            <a
+              className="font-medium text-black hover:text-stone-800 dark:text-stone-300 dark:hover:text-stone-100"
+              href="https://orthofox.vercel.app"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Read the announcement.
+            </a>
+          </p>
         </p>
 
         <div className="mx-auto mt-4 w-11/12 max-w-xs sm:w-full">
@@ -34,7 +37,7 @@ export default function LoginPage() {
               <div className="my-2 h-10 w-full rounded-md border border-stone-200 bg-stone-100 dark:border-stone-700 dark:bg-stone-800" />
             }
           >
-            <LoginButton />
+            <LoginButtonGithub /> <LoginButtonDiscord />
 
           </Suspense>
 
