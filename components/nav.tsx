@@ -6,6 +6,7 @@ import {
   BarChart3,
   Edit3,
   Globe,
+  HelpingHand,
   Layers,
   Layout,
   LayoutDashboard,
@@ -113,6 +114,12 @@ export default function Nav({ children }: { children: ReactNode }) {
           href: `/site/${id}/analytics`,
           isActive: segments.includes("analytics"),
           icon: <BarChart3 width={18} strokeWidth={1} />,
+        },
+        {
+          name: "Pledge",
+          href: `/site/${id}/pledge`,
+          isActive: segments.includes("plede"),
+          icon: <HelpingHand width={18} strokeWidth={1} />,
         },
         {
           name: "Settings",
