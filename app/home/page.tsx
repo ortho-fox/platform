@@ -4,8 +4,6 @@ import Image from "next/image";
 export default function HomePage() {
   return (
 
-
-
     <div className="flex h-screen flex-col items-center justify-center space-y-10">
       {/* <Image
         width={512}
@@ -44,7 +42,7 @@ export default function HomePage() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="http://app.localhost:3000"
+                href="http://app.orthdx.site"
                 className="group px-6 my-2 flex h-10 items-center justify-center space-x-2 rounded-md border border-stone-200 transition-colors duration-75 focus:outline-none dark:border-stone-700"
               >
                 Get Started
