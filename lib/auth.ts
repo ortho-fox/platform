@@ -14,6 +14,8 @@ export const authOptions: NextAuthOptions = {
       clientId: process.env.DISCORD_CLIENT_ID as string,
       clientSecret: process.env.DISCORD_CLIENT_SECRET as string,
       profile(profile) {
+        console.log("Discord Profile Data:", profile);
+
         return {
           id: profile.id, // Discord user ID
           name: profile.username, // Discord username
