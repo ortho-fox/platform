@@ -22,7 +22,7 @@ const PledgeSettings = () => {
       setIsSubmitting(false);
     } catch (error) {
       setIsSubmitting(false);
-      setError(error.message);
+      //setError(error.message);
     }
   };
 
