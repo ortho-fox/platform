@@ -73,21 +73,21 @@ const Command = Extension.create({
 
 const getSuggestionItems = ({ query }: { query: string }) => {
   return [
-    {
-      title: "Continue writing",
-      description: "Use AI to expand your thoughts.",
-      searchTerms: ["gpt"],
-      icon: <Magic className="w-7 text-black dark:text-white" />,
-    },
-    {
-      title: "Send Feedback",
-      description: "Let us know how we can improve.",
-      icon: <MessageSquarePlus size={18} />,
-      command: ({ editor, range }: CommandProps) => {
-        editor.chain().focus().deleteRange(range).run();
-        window.open("https://github.com/vercel/platforms/issues", "_blank");
-      },
-    },
+    // {
+    //   title: "Continue writing",
+    //   description: "Use AI to expand your thoughts.",
+    //   searchTerms: ["gpt"],
+    //   icon: <Magic className="w-7 text-black dark:text-white" />,
+    // },
+    // {
+    //   title: "Send Feedback",
+    //   description: "Let us know how we can improve.",
+    //   icon: <MessageSquarePlus size={18} />,
+    //   command: ({ editor, range }: CommandProps) => {
+    //     editor.chain().focus().deleteRange(range).run();
+    //     window.open("https://github.com/vercel/platforms/issues", "_blank");
+    //   },
+    // },
     {
       title: "Text",
       description: "Just start typing with plain text.",
@@ -345,11 +345,10 @@ const CommandList = ({
       {items.map((item: CommandItemProps, index: number) => {
         return (
           <button
-            className={`flex w-full items-center space-x-2 rounded-md px-2 py-1 text-left text-sm text-stone-900 hover:bg-stone-100 dark:text-white dark:hover:bg-stone-800 ${
-              index === selectedIndex
+            className={`flex w-full items-center space-x-2 rounded-md px-2 py-1 text-left text-sm text-stone-900 hover:bg-stone-100 dark:text-white dark:hover:bg-stone-800 ${index === selectedIndex
                 ? "bg-stone-100 text-stone-900 dark:bg-stone-800 dark:text-white"
                 : ""
-            }`}
+              }`}
             key={index}
             onClick={() => selectItem(index)}
           >
